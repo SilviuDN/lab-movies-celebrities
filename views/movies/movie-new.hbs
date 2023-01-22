@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <h2>Add a new movie</h2>
+            <hr>
+            <form action="/movies/create" method="POST">
+                <div class="form-group">
+                    <label for="movie-title">Title</label>
+                    <input type="text" name="title" id="movie-title" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="movie-genre">Genre</label>
+                    <input type="text" name="genre" id="movie-genre" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="movie-image">Image</label>
+                    <input type="text" name="image" id="movie-image" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="movie-plot">Plot</label>
+                    <input type="text" name="plot" id="movie-plot" class="form-control">
+                </div>
+
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2 sr-only" for="cast">Cast</label>
+                    <p>Cast: <em class="text-muted">(press and hold Ctrl for multiple sellection...)</em></p>
+                    
+                    <select class="custom-select mr-sm-2" id="cast" name="cast" multiple>
+                        {{#each celebrities}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+
+                <button type="submit" class="col-12 btn btn-secondary">Create</button>
+            </form>
+            {{#if errorMessage}}
+                <p class="alert alert-danger" role="alert">{{errorMessage}}</p>
+            {{/if}}
+        </div>
+
+
+    </div>
+</div>

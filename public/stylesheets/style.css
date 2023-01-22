@@ -23,3 +23,7 @@ button{
 li{
   list-style-type: none;
 }
+
+.btn{
+  margin: 1em 0;
+}
