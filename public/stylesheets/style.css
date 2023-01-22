@@ -1,8 +1,25 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+.form-group{
+  margin: 1em 0;
+}
+
+button{
+  margin: 1em 0;
+}
+
+li{
+  list-style-type: none;
 }
